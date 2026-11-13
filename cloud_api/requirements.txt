@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+psycopg[binary]>=3.2
+PyJWT>=2.8
+python-dotenv
+firebase-admin>=6.5

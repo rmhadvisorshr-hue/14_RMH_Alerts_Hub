@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DSC Tracker</string>
+    <string name="title_activity_main">DSC Tracker</string>
+    <string name="package_name">com.rmhadvisors.dsctracker</string>
+    <string name="custom_url_scheme">com.rmhadvisors.dsctracker</string>
+</resources>
