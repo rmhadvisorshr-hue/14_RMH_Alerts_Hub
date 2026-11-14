@@ -1,0 +1,8 @@
+{
+  "appId": "com.rmhadvisors.dsctracker",
+  "appName": "RMH Advisors",
+  "webDir": "dist",
+  "android": { "path": "../android" },
+  "server": { "androidScheme": "https" },
+  "plugins": { "PushNotifications": { "presentationOptions": ["badge", "sound", "alert"] } }
+}

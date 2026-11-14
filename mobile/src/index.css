@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Design tokens: the same palette as the Notice Alert web app (--primary, --line, --muted, ...). */
+:root {
+  --primary: #2563eb; --bg: #f8fafc; --ink: #0f172a; --muted: #64748b; --line: #e2e8f0;
+}
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: 'Inter Variable', Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+button, input, select, textarea { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Compact month/week grid (FullCalendar, as in the web calendar) drawn with one dot per event. */
+.cal-mobile .fc { --fc-border-color: var(--line); --fc-today-bg-color: #eff6ff; --fc-page-bg-color: transparent; --fc-neutral-bg-color: #f8fafc; font-family: inherit; font-size: 13px; }
+.cal-mobile .fc-theme-standard .fc-scrollgrid { border: 0; }
+.cal-mobile .fc-theme-standard td, .cal-mobile .fc-theme-standard th { border-color: var(--line); }
+.cal-mobile .fc .fc-col-header-cell-cushion { color: var(--muted); font-weight: 500; font-size: 11px; padding: 6px 0; text-decoration: none; }
+.cal-mobile .fc .fc-daygrid-day-frame { min-height: 48px; cursor: pointer; }
+.cal-mobile .fc .fc-daygrid-day-top { justify-content: center; }
+.cal-mobile .fc .fc-daygrid-day-number { padding: 4px 0 0; color: var(--ink); font-weight: 500; text-decoration: none; width: 100%; text-align: center; }
+.cal-mobile .fc .fc-day-other .fc-daygrid-day-number { color: #cbd5e1; }
+.cal-mobile .dnum { display: inline-flex; align-items: baseline; justify-content: center; gap: 1px; }
+.cal-mobile .dnum b { font-size: 9px; font-weight: 600; color: var(--muted); }
+.cal-mobile .fc .is-selected .fc-daygrid-day-number { color: #fff; }
+.cal-mobile .fc .is-selected .dnum { background: var(--primary); color: #fff; border-radius: 999px; padding: 0 7px; }
+.cal-mobile .fc .is-selected .dnum b { color: #dbeafe; }
+.cal-mobile .fc .fc-daygrid-day-events { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; margin: 0; padding: 3px 2px 4px; min-height: 12px; }
+.cal-mobile .fc .fc-daygrid-event-harness { position: static !important; visibility: visible !important; margin: 0 !important; inset: auto !important; }
+.cal-mobile .fc .fc-daygrid-event { margin: 0; padding: 0; border: 0; background: none; box-shadow: none; }
+.cal-mobile .dot { display: block; width: 8px; height: 8px; border-radius: 999px; background: var(--c); }
+/* Issue dates are dashed, as in the web calendar. */
+.cal-mobile .dot-issue { background: #fff; box-shadow: inset 0 0 0 1.5px var(--c); border: 1px dashed var(--c); }
